@@ -3,7 +3,7 @@
 }
 
 function clock(){
-  let new = new Data();
+  let now = new Date();
   let hh = now.getHours();
   let mm = now.getMinutes();
   let ss = now.getSeconds();
