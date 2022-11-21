@@ -13,4 +13,6 @@ function start(){
     let result = document.getElementById("result");
   
     result.textContent = hh +":"+mm+":"+ss;
+  }
+  ,1000);
 }
