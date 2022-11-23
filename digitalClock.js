@@ -8,9 +8,9 @@ function start(){
     let year = now.getYear();
     let month = now.getMonth()+1;
     let date = now.getDate();
-    let num= now.getDay();
+    let dayNum= now.getDay();
     const weekday = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
-    let day = weekday[num];
+    let day = weekday[dayNum];
 
     hh = hh<10? "0"+hh:hh;
     mm = mm<10? "0"+mm:mm;
@@ -19,7 +19,7 @@ function start(){
     date = date <10? "0"+date:date;
     
     let today = `${year}.${month}.${date} ${day}`;
-    let time = `${hour}:${min}:${sec}`;
+    let time = `${hh}:${mm}:${ss}`;
   
     document.querySelector(".clock-date").innerText = today;
     document.querySelector(".clock-time").innerText = time;
