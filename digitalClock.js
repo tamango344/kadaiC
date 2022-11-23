@@ -2,27 +2,17 @@ function start(){
   window.setInterval(function()
   {
     let now = new Date();
-    let hh = now.getHours();
-    let mm = now.getMinutes();
-    let ss = now.getSeconds();
-    let year = now.getYear();
-    let month = now.getMonth()+1;
-    let date = now.getDate();
-    let dayNum= now.getDay();
-    const weekday = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
-    let day = weekday[dayNum];
+    let hour = now.getHours();
+    let minutes = now.getMinutes();
+    let seconds = now.getSeconds();
 
-    hh = hh<10? "0"+hh:hh;
-    mm = mm<10? "0"+mm:mm;
-    ss = ss<10? "0"+ss:ss;
-    month = month <10? "0"+month:month;
-    date = date <10? "0"+date:date;
-    
-    let today = `${year}.${month}.${date} ${day}`;
-    let time = `${hh}:${mm}:${ss}`;
+    hour = hour<10? "0"+hh:hh;
+    minutes = minutes<10? "0"+mm:mm;
+    seconds = seconds<10? "0"+ss:ss;
   
-    document.querySelector(".clock-date").innerText = today;
-    document.querySelector(".clock-time").innerText = time;
+    let result = document.getElementById("result");
+  
+    result.textContent = hour +":"+minutes+":"+seconds;
   }
   ,1000);
 }
